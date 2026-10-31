@@ -1,0 +1,22 @@
+# AI MOCK INTERVIEW — VIGNAN'S UNIVERSITY
+# Backend Dependencies
+
+fastapi>=0.115.0
+uvicorn>=0.32.0
+pydantic>=2.9.0
+pydantic-settings>=2.6.0
+email-validator>=2.0.0
+motor>=3.6.0
+pymongo>=4.9.0
+argon2-cffi>=23.1.0
+pyjwt>=2.9.0
+python-multipart>=0.0.12
+resend>=2.4.0
+google-genai>=0.1.1
+websockets>=13.1
+httpx>=0.27.2
+reportlab>=4.2.5
+pillow>=10.0.0
+pytest>=8.3.0
+pytest-asyncio>=0.24.0
+python-dotenv>=1.0.1

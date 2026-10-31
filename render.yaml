@@ -1,0 +1,37 @@
+services:
+  - type: web
+    name: vignan-ai-mock-interview-backend
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT --app-dir backend"
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      - key: MONGODB_DATABASE
+        value: vignan_ai_interview_db
+      - key: AI_MODEL
+        value: gemini-2.0-flash
+      # The following sensitive variables must be set manually in the Render Dashboard
+      # under: Web Service -> Environment -> Add Environment Variable
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: EMAIL_FROM
+        sync: false
+      - key: AI_PROVIDER_API_KEY
+        sync: false
+      - key: ADMIN_USERNAME
+        sync: false
+      - key: ADMIN_INITIAL_PASSWORD
+        sync: false
+      - key: FRONTEND_ORIGIN
+        sync: false
