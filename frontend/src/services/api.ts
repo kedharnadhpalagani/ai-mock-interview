@@ -10,7 +10,7 @@ import {
 } from '../types';
 
 // Use environment variable in production (Render backend URL) or default to local FastAPI
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://ai-mock-interview-smrk.onrender.com/api/v1';
 
 export const api = axios.create({
   baseURL: API_BASE_URL,
